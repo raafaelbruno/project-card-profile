@@ -1,0 +1,101 @@
+/* Reset de margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #b3cdd1, #9fa8da, #b3cdd1); /* Adiciona um fundo gradiente */
+    background-size: 500% 100%;
+    animation: gradientAnimation 3s infinite alternate;
+}
+
+.cardProfile {
+    width: 600px;
+    padding: 20px;
+    backdrop-filter: blur(px); /* Adiciona o efeito de desfoque */
+    background-color: rgba(0, 0, 0, 0.1); /* Fundo verde semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+    text-align: center;
+}
+
+
+.imageProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px; /* Espaço abaixo da imagem */
+}
+
+.image {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Sombra suave para a imagem */
+}
+
+.nameProfile h2 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 10px; /* Espaço abaixo do nome */
+}
+
+.sobre {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 15px; /* Espaço abaixo da descrição */
+}
+
+.bio {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 20px; /* Espaço abaixo da bio */
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espaço entre os links sociais */
+    transition: color 0.3s;
+    font-size: 24px; /* Tamanho dos icones */
+}
+
+.social-links a{
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Define a largura do ícone */
+    height: 50px; /* Define a altura do ícone (igual à largura para ser circular) */
+    transition: background 0.2s, border-color 0.2s;
+    border-radius: 50%;
+    border: 2px solid transparent; /* Borda arredondada transparente */
+}
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Muda a cor ao passar o mouse */
+    border-color: rgba(128, 128, 128, 0.5); /* Borda cinza transparente ao passar o mouse */
+}
+
+
+/* animação para o gradiente */
+
+@keyframes gradientAnimation {
+    0%{
+        background-position-x: 0%;
+    }
+    50%{
+        background-position-x: 50%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
